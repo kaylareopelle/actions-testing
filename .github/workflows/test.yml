@@ -1,0 +1,15 @@
+name: Update Config Docs
+
+on:
+  workflow_dispatch:
+
+env:
+  FIRST_VAR: test
+
+jobs:
+  test_env_var:
+    name: Test env var
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check var value
+        run: echo "$FIRST_VAR"
